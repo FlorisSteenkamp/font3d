@@ -8,17 +8,6 @@ From cli (from ./font3d folder)
 4(b). `npm run coverage
 5. Commit changes locally
 6. `npm version patch / minor / major
-7. `git push origin master
+7. `git push origin main
 8. `git push --tags
 9. `npm publish
-
-Docs
-----
-* Go to `docs-create` folder and run `npm run build`
-* Run `copydocs.bat`
-
-
-Info
-====
-npm account name: floris / florissteenkamp
-
