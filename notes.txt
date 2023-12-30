@@ -1,0 +1,24 @@
+Send new patch version to npm
+-----------------------------
+From cli (from ./font3d folder)
+1. update package versions (`ncu` or `ncu -u`)
+2. `npm install`
+3. `npm run build
+4(a). `npm test (skip if coverage below will be run anyway)
+4(b). `npm run coverage
+5. Commit changes locally
+6. `npm version patch / minor / major
+7. `git push origin master
+8. `git push --tags
+9. `npm publish
+
+Docs
+----
+* Go to `docs-create` folder and run `npm run build`
+* Run `copydocs.bat`
+
+
+Info
+====
+npm account name: floris / florissteenkamp
+
