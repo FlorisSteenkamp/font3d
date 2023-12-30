@@ -1,0 +1,48 @@
+{
+    "name": "font3d",
+    "description": "OpenType font 3d generator",
+    "version": "0.0.1",
+    "author": {
+        "name": "Floris"
+    },
+    "keywords": [
+        "fonts",
+        "3d"
+    ],
+    "license": "MIT",
+    "type": "module",
+    "main": "index.js",
+    "repository": {
+        "type": "git"
+    },
+    "dependencies": {
+
+    },
+    "peerDependencies": {
+        "@types/react": "^18.2.46",
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.3.11",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.10.4",
+        "chai": "^4.3.10",
+        "circular-dependency-plugin": "^5.2.2",
+        "mocha": "^10.2.0",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.3.3",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-bundle-analyzer": "^4.10.1"
+    },
+    "scripts": {
+        "build": "npm run build-browser && npm run build-node",
+        "build-node": "rimraf node && tsc",
+        "build-browser": "rimraf browser && webpack",
+        "test": "mocha",
+        "coverage": "c8 mocha"
+    },
+    "browser": {
+        "fs": false
+    }
+}

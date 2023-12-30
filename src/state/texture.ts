@@ -1,0 +1,7 @@
+
+interface Texture {
+    
+}
+
+
+export { Texture }

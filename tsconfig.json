@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "moduleResolution": "node",
+        "module": "commonJS",
+        "target": "es2022",
+        "declaration": false,
+        "noEmitOnError": true,
+        "sourceMap": true,
+        "outDir": "node",
+        "allowJs": false,
+        "jsx": "react",
+        "paths": {}
+    },
+    "include": [
+        // "./src/**/index.ts",
+        "./src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
