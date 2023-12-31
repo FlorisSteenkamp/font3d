@@ -1,5 +1,5 @@
-import { projectionToCartesian } from './projection-to-cartesian';
-import { initializeRender } from './initialize-render';
+import { projectionToCartesian } from './projection-to-cartesian.js';
+import { initializeRender } from './initialize-render.js';
 /**
  *
  * @param glInfo

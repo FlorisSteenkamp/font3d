@@ -1,9 +1,9 @@
-import { Orientation } from './orientation';
-import { Lighting } from './lighting';
-import { Material } from './material';
-import { Profile } from './profile';
-import { Texture } from './texture';
-import { Options } from './options';
+import { Orientation } from './orientation.js';
+import { Lighting } from './lighting.js';
+import { Material } from './material.js';
+import { Profile } from './profile.js';
+import { Texture } from './texture.js';
+import { Options } from './options.js';
 interface EffectsState {
     orientation: Orientation;
     lighting: Lighting;

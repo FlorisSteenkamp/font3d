@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { initBuffers } from './gl/init-buffers';
-import { drawScene } from './gl/draw-scene';
-import { initShader_ } from './init-shader-';
-import { initTexturePromise } from './gl/init-texture-promise';
+import { initBuffers } from './gl/init-buffers.js';
+import { drawScene } from './gl/draw-scene.js';
+import { initShader_ } from './init-shader-.js';
+import { initTexturePromise } from './gl/init-texture-promise.js';
 const Font3d = React.memo(function (props) {
     const { fontSize, effectsState, height, models, triangleCounts, positionedGlyphs } = props;
     const { textureUrl } = effectsState.material;

@@ -1,7 +1,7 @@
-import { initShader } from "./gl/init-shader";
-import { fsStr } from "./gl/shaders/blinn-phong/fs";
-import { vsStr } from "./gl/shaders/blinn-phong/vs";
-import { GlInfo } from "./gl/gl-info";
+import { initShader } from "./gl/init-shader.js";
+import { fsStr } from "./gl/shaders/blinn-phong/fs.js";
+import { vsStr } from "./gl/shaders/blinn-phong/vs.js";
+import { GlInfo } from "./gl/gl-info.js";
 
 
 function initShader_(

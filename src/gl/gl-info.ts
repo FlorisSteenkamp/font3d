@@ -1,4 +1,4 @@
-import { ShaderInfo } from "./shader-info";
+import { ShaderInfo } from "./shader-info.js";
 
 
 /**

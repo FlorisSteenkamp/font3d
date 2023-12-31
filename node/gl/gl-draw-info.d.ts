@@ -1,5 +1,5 @@
-import { Buffers } from "./buffers";
-import { ShaderInfo } from "./shader-info";
+import { Buffers } from "./buffers.js";
+import { ShaderInfo } from "./shader-info.js";
 interface GlDrawInfo {
     gl?: WebGL2RenderingContext;
     shaderInfo?: ShaderInfo;

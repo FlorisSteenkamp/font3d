@@ -1,5 +1,5 @@
-import { Orientation } from '../state/orientation';
-import { createUnitMat4, invert, ortho, perspective, rotate, translate, transpose } from '../matrix/mat4';
+import { Orientation } from '../state/orientation.js';
+import { createUnitMat4, invert, ortho, perspective, rotate, translate, transpose } from '../matrix/mat4.js';
 
 
 function initializeRender(

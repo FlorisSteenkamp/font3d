@@ -1,16 +1,16 @@
 import * as React from 'react';
 // import { useRef, useEffect, memo } from 'react';
-import { EffectsState } from './state/effects';
-import { initBuffers } from './gl/init-buffers';
-import { drawScene } from './gl/draw-scene';
-import { GlDrawInfo } from './gl/gl-draw-info';
-import { GlInfo } from './gl/gl-info';
-import { RenderInfo } from './render-info';
-import { initShader_ } from './init-shader-';
-import { initTexturePromise } from './gl/init-texture-promise';
-import { Buffers } from './gl/buffers';
-import { GlState } from './gl-state';
-import { Model } from './gl/model';
+import { EffectsState } from './state/effects.js';
+import { initBuffers } from './gl/init-buffers.js';
+import { drawScene } from './gl/draw-scene.js';
+import { GlDrawInfo } from './gl/gl-draw-info.js';
+import { GlInfo } from './gl/gl-info.js';
+import { RenderInfo } from './render-info.js';
+import { initShader_ } from './init-shader-.js';
+import { initTexturePromise } from './gl/init-texture-promise.js';
+import { Buffers } from './gl/buffers.js';
+import { GlState } from './gl-state.js';
+import { Model } from './gl/model.js';
 
 
 interface Props {

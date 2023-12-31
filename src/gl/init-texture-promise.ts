@@ -1,5 +1,5 @@
-import { loadTexture } from "./load-texture";
-import { GlInfo } from "./gl-info";
+import { loadTexture } from "./load-texture.js";
+import { GlInfo } from "./gl-info.js";
 
 
 async function initTexturePromise(

@@ -1,5 +1,5 @@
-import { EffectsState } from '../state/effects';
-import { GlDrawInfo } from './gl-draw-info';
+import { EffectsState } from '../state/effects.js';
+import { GlDrawInfo } from './gl-draw-info.js';
 /**
  *
  * @param glInfo

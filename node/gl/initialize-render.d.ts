@@ -1,4 +1,4 @@
-import { Orientation } from '../state/orientation';
+import { Orientation } from '../state/orientation.js';
 declare function initializeRender(gl: WebGL2RenderingContext, projection: 'orthogonal' | 'perspective', orientation: Orientation, fontSize: number): {
     projectionMatrix: [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number];
     modelViewMatrix: [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number];

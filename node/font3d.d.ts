@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { EffectsState } from './state/effects';
-import { Model } from './gl/model';
+import { EffectsState } from './state/effects.js';
+import { Model } from './gl/model.js';
 interface Props {
     x: number;
     y: number;

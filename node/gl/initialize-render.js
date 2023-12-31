@@ -1,4 +1,4 @@
-import { createUnitMat4, invert, ortho, perspective, rotate, translate, transpose } from '../matrix/mat4';
+import { createUnitMat4, invert, ortho, perspective, rotate, translate, transpose } from '../matrix/mat4.js';
 function initializeRender(gl, projection, orientation, fontSize) {
     const canvas = gl.canvas;
     const { clientWidth, clientHeight } = canvas;

@@ -1,7 +1,7 @@
-import { projectionToCartesian } from './projection-to-cartesian';
-import { EffectsState } from '../state/effects';
-import { GlDrawInfo } from './gl-draw-info';
-import { initializeRender } from './initialize-render';
+import { projectionToCartesian } from './projection-to-cartesian.js';
+import { EffectsState } from '../state/effects.js';
+import { GlDrawInfo } from './gl-draw-info.js';
+import { initializeRender } from './initialize-render.js';
 
 
 /**

@@ -1,4 +1,4 @@
-import { loadTexture } from "./load-texture";
+import { loadTexture } from "./load-texture.js";
 async function initTexturePromise(glInfo, textureUrl) {
     const gl = glInfo.gl;
     const textureInfo = await loadTexture(gl, textureUrl);

@@ -1,5 +1,5 @@
-import { Buffers } from './buffers';
-import { Model } from './model';
+import { Buffers } from './buffers.js';
+import { Model } from './model.js';
 
 
 function initBuffers(
