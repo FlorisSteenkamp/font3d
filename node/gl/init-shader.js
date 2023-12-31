@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.initShader = void 0;
 /*
  * Initialize a shader program, so WebGL knows how to draw our data
  */
@@ -43,7 +40,6 @@ function initShader(gl, vs, fs) {
         },
     };
 }
-exports.initShader = initShader;
 /*
  * creates a shader of the given type, uploads the source and
  * compiles it.
@@ -62,4 +58,5 @@ function loadShader(gl, type, source) {
     }
     return shader;
 }
+export { initShader };
 //# sourceMappingURL=init-shader.js.map

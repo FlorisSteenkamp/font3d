@@ -1,1 +1,1 @@
-{"version":3,"file":"vs.js","sourceRoot":"","sources":["../../../../src/gl/shaders/blinn-phong/vs.ts"],"names":[],"mappings":";;;AAAA,MAAM,IAAI,GAAG,CAAC,CAAM,EAAE,EAAE,CAAC,CAAC,CAAC;AAE3B,MAAM,KAAK,GAAW,IAAI,CAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAsCzB,CAAC;AAGO,sBAAK"}
+{"version":3,"file":"vs.js","sourceRoot":"","sources":["../../../../src/gl/shaders/blinn-phong/vs.ts"],"names":[],"mappings":"AAAA,MAAM,IAAI,GAAG,CAAC,CAAM,EAAE,EAAE,CAAC,CAAC,CAAC;AAE3B,MAAM,KAAK,GAAW,IAAI,CAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAsCzB,CAAC;AAGF,OAAO,EAAE,KAAK,EAAE,CAAA"}

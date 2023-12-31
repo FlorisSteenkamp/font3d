@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.vsStr = void 0;
 const vert = (x) => x;
 const vsStr = vert `
     precision highp float;
@@ -41,5 +38,5 @@ const vsStr = vert `
         vTextureCoord = aTextureCoord;
     }
 `;
-exports.vsStr = vsStr;
+export { vsStr };
 //# sourceMappingURL=vs.js.map

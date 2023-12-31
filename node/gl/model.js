@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.emptyModel = void 0;
 const emptyModel = {
     vertices: [],
     vertexIndices: [],
@@ -10,5 +7,5 @@ const emptyModel = {
     wireframeVertices: [],
     triangleCount: 0
 };
-exports.emptyModel = emptyModel;
+export { emptyModel };
 //# sourceMappingURL=model.js.map

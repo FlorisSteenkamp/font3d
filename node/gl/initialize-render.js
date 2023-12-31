@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.initializeRender = void 0;
-const mat4_1 = require("../matrix/mat4");
+import { createUnitMat4, invert, ortho, perspective, rotate, translate, transpose } from '../matrix/mat4';
 function initializeRender(gl, projection, orientation, fontSize) {
     const canvas = gl.canvas;
     const { clientWidth, clientHeight } = canvas;
@@ -17,17 +14,17 @@ function initializeRender(gl, projection, orientation, fontSize) {
     const zNear = 0.1;
     const zFar = 10.0;
     const projectionMatrix = projection === 'orthogonal'
-        ? (0, mat4_1.ortho)(0, aspectRatio, -1, 0, zNear, zFar)
-        : (0, mat4_1.perspective)(fieldOfView, aspectRatio, zNear, zFar);
+        ? ortho(0, aspectRatio, -1, 0, zNear, zFar)
+        : perspective(fieldOfView, aspectRatio, zNear, zFar);
     // Set the drawing position to the "identity" point, which is
     // the center of the scene.
-    let modelViewMatrix = (0, mat4_1.createUnitMat4)();
-    modelViewMatrix = (0, mat4_1.translate)(modelViewMatrix, [0.0, 0.0, -1.0]);
-    modelViewMatrix = (0, mat4_1.rotate)(modelViewMatrix, orientation.z, [0, 0, 1]);
-    modelViewMatrix = (0, mat4_1.rotate)(modelViewMatrix, orientation.x, [0, 1, 0]);
-    modelViewMatrix = (0, mat4_1.rotate)(modelViewMatrix, orientation.y, [1, 0, 0]);
-    let normalMatrix = (0, mat4_1.transpose)((0, mat4_1.invert)(modelViewMatrix));
+    let modelViewMatrix = createUnitMat4();
+    modelViewMatrix = translate(modelViewMatrix, [0.0, 0.0, -1.0]);
+    modelViewMatrix = rotate(modelViewMatrix, orientation.z, [0, 0, 1]);
+    modelViewMatrix = rotate(modelViewMatrix, orientation.x, [0, 1, 0]);
+    modelViewMatrix = rotate(modelViewMatrix, orientation.y, [1, 0, 0]);
+    let normalMatrix = transpose(invert(modelViewMatrix));
     return { projectionMatrix, modelViewMatrix, normalMatrix };
 }
-exports.initializeRender = initializeRender;
+export { initializeRender };
 //# sourceMappingURL=initialize-render.js.map

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.projectionToCartesian = void 0;
 /**
  * Transforms a point in 3d defined by its xy projection onto a half-sphere with
  * radius `distance` centered at the origin
@@ -27,5 +24,5 @@ function projectionToCartesian(p = [0, 0], distance = 1) {
     z = z * distance;
     return [x, y, z];
 }
-exports.projectionToCartesian = projectionToCartesian;
+export { projectionToCartesian };
 //# sourceMappingURL=projection-to-cartesian.js.map

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadTexture = void 0;
 /**
  * Initialize a texture and load an image.
  * When the image finished loading copy it into the texture.
@@ -45,8 +42,8 @@ async function loadTexture(gl, url) {
         height: img.height
     };
 }
-exports.loadTexture = loadTexture;
 function isPowerOf2(value) {
     return (value & (value - 1)) === 0;
 }
+export { loadTexture };
 //# sourceMappingURL=load-texture.js.map

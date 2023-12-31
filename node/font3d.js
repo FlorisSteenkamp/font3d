@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Font3d = void 0;
-const React = require("react");
-const init_buffers_1 = require("./gl/init-buffers");
-const draw_scene_1 = require("./gl/draw-scene");
-const init_shader_1 = require("./init-shader-");
-const init_texture_promise_1 = require("./gl/init-texture-promise");
+import * as React from 'react';
+import { initBuffers } from './gl/init-buffers';
+import { drawScene } from './gl/draw-scene';
+import { initShader_ } from './init-shader-';
+import { initTexturePromise } from './gl/init-texture-promise';
 const Font3d = React.memo(function (props) {
     const { fontSize, effectsState, height, models, triangleCounts, positionedGlyphs } = props;
     const { textureUrl } = effectsState.material;
@@ -39,8 +36,8 @@ const Font3d = React.memo(function (props) {
         }
         const renderInfo = $prevRenderInfo.current;
         renderInfo.textureUrl = textureUrl;
-        (0, init_shader_1.initShader_)(glInfo);
-        (0, init_texture_promise_1.initTexturePromise)(glInfo, renderInfo.textureUrl)
+        initShader_(glInfo);
+        initTexturePromise(glInfo, renderInfo.textureUrl)
             .then(() => {
             glState.initialized = true;
             const observer = new window.ResizeObserver(changeCanvasWidth);
@@ -57,7 +54,7 @@ const Font3d = React.memo(function (props) {
         const { textureUrl: textureUrl_ } = prevRenderInfo;
         if (textureUrl !== textureUrl_) {
             prevRenderInfo.textureUrl = textureUrl;
-            await (0, init_texture_promise_1.initTexturePromise)(glInfo, prevRenderInfo.textureUrl);
+            await initTexturePromise(glInfo, prevRenderInfo.textureUrl);
         }
         const gl = glInfo.gl;
         glInfo.triangleCounts = triangleCounts;
@@ -77,7 +74,7 @@ const Font3d = React.memo(function (props) {
             const model = models[i];
             let buffers = glState.buffersMap.get(model);
             if (buffers === undefined) {
-                buffers = (0, init_buffers_1.initBuffers)(gl, model);
+                buffers = initBuffers(gl, model);
                 buffersMap.set(model, buffers);
             }
             bufferss.push(buffers);
@@ -92,12 +89,12 @@ const Font3d = React.memo(function (props) {
                 xOffset: scale * positionedGlyph.x
             };
             glInfo.gl = gl;
-            (0, draw_scene_1.drawScene)(glInfo, "orthogonal", effectsState);
+            drawScene(glInfo, "orthogonal", effectsState);
         }
     }
     drawScene_();
     return (React.createElement("div", { ref: $div, style: { display: 'block', margin: 'auto', border: '1px solid #ddd' } },
         React.createElement("canvas", { ref: $canvas, height: height })));
 });
-exports.Font3d = Font3d;
+export { Font3d };
 //# sourceMappingURL=font3d.js.map

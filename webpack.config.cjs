@@ -1,8 +1,6 @@
+const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
-const path = require('path');
-const projectRoot = '../';
 
 
 module.exports = {

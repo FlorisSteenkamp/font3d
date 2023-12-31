@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.transpose = exports.rotate = exports.translate = exports.perspective = exports.ortho = exports.invert = exports.createUnitMat4 = void 0;
 // TODO2 - fix
 //const EPSILON = 0.000001
 /**
@@ -61,7 +58,6 @@ function invert(a) {
         (a20 * b03 - a21 * b01 + a22 * b00) * det
     ];
 }
-exports.invert = invert;
 /**
  * Returns an orthogonal projection matrix with the given bounds.
  *
@@ -92,7 +88,6 @@ function ortho(left, right, bottom, top, near, far) {
     m.push(1);
     return m;
 }
-exports.ortho = ortho;
 function perspective(fovy, aspect, near, far) {
     const m = [];
     const f = 1.0 / Math.tan(fovy / 2);
@@ -108,11 +103,9 @@ function perspective(fovy, aspect, near, far) {
     m.push(0);
     return m;
 }
-exports.perspective = perspective;
 function createUnitMat4() {
     return [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 }
-exports.createUnitMat4 = createUnitMat4;
 function translate(a, v) {
     const m = a.slice();
     const x = v[0];
@@ -124,7 +117,6 @@ function translate(a, v) {
     m[15] = a[3] * x + a[7] * y + a[11] * z + a[15];
     return m;
 }
-exports.translate = translate;
 function rotate(a, rad, axis) {
     let x = axis[0];
     let y = axis[1];
@@ -178,7 +170,6 @@ function rotate(a, rad, axis) {
         a[15]
     ];
 }
-exports.rotate = rotate;
 function transpose(a) {
     return [
         a[0], a[4], a[8], a[12],
@@ -187,5 +178,5 @@ function transpose(a) {
         a[3], a[7], a[11], a[15]
     ];
 }
-exports.transpose = transpose;
+export { createUnitMat4, invert, ortho, perspective, translate, rotate, transpose };
 //# sourceMappingURL=mat4.js.map

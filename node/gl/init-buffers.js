@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.initBuffers = void 0;
 function initBuffers(gl, model) {
     const { vertices, vertexColors, vertexNormals, vertexIndices, textureCoords, wireframeVertices } = model;
     const vertexBuffer = createAndLoadBuffer(gl, Float32Array, vertices);
@@ -21,11 +18,11 @@ function initBuffers(gl, model) {
         vertexIndex: vertexIndexBuffer
     };
 }
-exports.initBuffers = initBuffers;
 function createAndLoadBuffer(gl, constructor, values) {
     const buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(gl.ARRAY_BUFFER, new constructor(values), gl.STATIC_DRAW);
     return buffer;
 }
+export { initBuffers };
 //# sourceMappingURL=init-buffers.js.map

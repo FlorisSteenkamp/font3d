@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.fsStr = void 0;
 const frag = (x) => x;
 let fsStr = frag `
     precision highp float;
@@ -67,5 +64,5 @@ let fsStr = frag `
             : vec4(color + specular_, 1.0);
     }
 `;
-exports.fsStr = fsStr;
+export { fsStr };
 //# sourceMappingURL=fs.js.map

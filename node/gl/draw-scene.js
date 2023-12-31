@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.drawScene = void 0;
-const projection_to_cartesian_1 = require("./projection-to-cartesian");
-const initialize_render_1 = require("./initialize-render");
+import { projectionToCartesian } from './projection-to-cartesian';
+import { initializeRender } from './initialize-render';
 /**
  *
  * @param glInfo
@@ -15,7 +12,7 @@ function drawScene(glInfo, projection, effectsState) {
     const { orientation, lighting, options, material } = effectsState;
     const { wireframe } = options;
     const { color: materialColor, textureRepeatCountX, textureRepeatCountY } = material;
-    const { modelViewMatrix, normalMatrix, projectionMatrix } = (0, initialize_render_1.initializeRender)(gl, projection, orientation, fontSize);
+    const { modelViewMatrix, normalMatrix, projectionMatrix } = initializeRender(gl, projection, orientation, fontSize);
     const { attribLocations, uniformLocations } = shaderInfo;
     const { 
     /*aVertexColor, */ aVertexNormal, aVertexPosition, aWireframeCoord, aTextureCoord } = attribLocations;
@@ -47,7 +44,7 @@ function drawScene(glInfo, projection, effectsState) {
     gl.uniform1f(uXOffset, xOffset);
     const { brightness: db, direction, distance } = directional;
     gl.uniform3f(uDirectionalColor, db, db, db);
-    const [x, y, z] = (0, projection_to_cartesian_1.projectionToCartesian)(direction, distance);
+    const [x, y, z] = projectionToCartesian(direction, distance);
     gl.uniform3f(uDirectionalDirection, x, y, z);
     gl.uniform1i(uTextureWidth, textureWidth);
     if (wireframe) {
@@ -57,10 +54,10 @@ function drawScene(glInfo, projection, effectsState) {
         gl.drawElements(gl.TRIANGLES, 3 * triangleCount, gl.UNSIGNED_SHORT, 0);
     }
 }
-exports.drawScene = drawScene;
 function enableBuffer(gl, buffer, index, size, type) {
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.vertexAttribPointer(index, size, type, false, 0, 0);
     gl.enableVertexAttribArray(index);
 }
+export { drawScene };
 //# sourceMappingURL=draw-scene.js.map
